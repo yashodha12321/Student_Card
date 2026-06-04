@@ -45,11 +45,13 @@ body{
     color: #f4f0f5;
     transition: 0.3s ease;
 }
-follow-btn{
-    background: #000;
-    color: #fff;
+#follow-btn{
+    background:red;
+    color: #1d1b1b;
     padding: 10px 20px;
+    font-weight:bold;
+    border-radius:15px;
+    cursor: pointer;
     border: none;
-    border-radius:5px;
-    cursor:palm;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
