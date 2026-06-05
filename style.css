@@ -4,11 +4,12 @@
     box-sizing: border-box;
 }
 body{
-    height:100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #dedadd;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#dedadd;
+    padding:20px;
 }
 .card{
     width:90%;
@@ -24,9 +25,10 @@ body{
     justify-content:center
 }
 .img{
-    border-radius: 50%;
+    width:300px;
+    height:300px;
     max-width:100%;
-    height:auto;
+    border-radius:50%;
     object-fit:cover;
 }
 .skills{
@@ -57,4 +59,39 @@ body{
     cursor: pointer;
     border: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px){
+
+    .card{
+        width:95%;
+        min-height:auto;
+        padding:20px;
+    }
+
+    .img{
+        width:180px;
+        height:180px;
+    }
+
+    .name{
+        font-size:24px;
+        text-align:center;
+    }
+
+    .description{
+        text-align:center;
+        font-size:14px;
+        line-height:1.5;
+    }
+
+    .skills{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+        padding:15px;
+    }
+
+    .skills span{
+        padding:8px 15px;
+    }
 }
