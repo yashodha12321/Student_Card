@@ -3,58 +3,114 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
-    height:100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #dedadd;
+    padding: 20px;
 }
+
 .card{
-    width:90%;
-    min-height:600px;
+    width: 90%;
     max-width: 600px;
-    align-items: center;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
-    background:linear-gradient(rgb(222, 167, 213), rgb(222, 173, 167));
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    justify-content:center
+    border-radius: 20px;
+    background: linear-gradient(rgb(222, 167, 213), rgb(222, 173, 167));
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .img{
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
     border-radius: 50%;
-    max-width:100%;
-    height:auto;
-    object-fit:cover;
+    object-fit: cover;
 }
+
+.name{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.description{
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
 .skills{
-    border-radius: 10px;
-     display:flex;
+    display: flex;
+    gap: 30px;
     margin-top: 20px;
-    gap:30px;
-     background: linear-gradient(rgb(222, 167, 213), rgb(222, 173, 167));
-     padding: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(rgb(222, 167, 213), rgb(222, 173, 167));
 }
+
 .skills span{
     background: #fff;
     padding: 10px 20px;
-    border-radius:15px;
+    border-radius: 15px;
     font-weight: bold;
 }
+
 .skills span:hover{
     background: #000;
     color: #f4f0f5;
     transition: 0.3s ease;
 }
+
 #follow-btn{
-    background:red;
+    margin-top: 20px;
+    background: red;
     color: #1d1b1b;
     padding: 10px 20px;
-    font-weight:bold;
-    border-radius:15px;
+    font-weight: bold;
+    border-radius: 15px;
     cursor: pointer;
     border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px){
+
+    .card{
+        width: 95%;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .img{
+        width: 180px;
+        height: 180px;
+    }
+
+    .name{
+        font-size: 24px;
+    }
+
+    .description{
+        font-size: 14px;
+    }
+
+    .skills{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .skills span{
+        padding: 8px 15px;
+    }
 }
